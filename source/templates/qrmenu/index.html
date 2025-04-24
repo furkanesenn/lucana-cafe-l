@@ -1,0 +1,70 @@
+{% extends './base.html' %} {% load static %} {% block content %}
+<div class="featured">
+  <h2 class="featured__title heading-secondary">Sık Tercih Edilenler</h2>
+</div>
+
+<div class="featured__list">
+  <div class="featured__item featured__item--1">
+    <div class="featured__item__image-container">
+      <img
+        src="{% static 'dist/assets/meals/turkish-coffee.png' %}"
+        alt="Featured Item 1"
+        class="featured__item__image"
+      />
+    </div>
+    <div class="featured__item__content">
+      <h3 class="heading-tertiary">Örnek Ürün 1</h3>
+      
+    </div>
+  </div>
+
+  <div class="featured__item featured__item--2">
+    <div class="featured__item__image-container">
+      <img
+        src="{% static 'dist/assets/meals/omelette.png' %}"
+        alt="Featured Item 2"
+        class="featured__item__image"
+      />
+    </div>
+    <div class="featured__item__content">
+      <h3 class="heading-tertiary">Örnek Ürün 2</h3>
+      
+    </div>
+  </div>
+
+  <div class="featured__item featured__item--3">
+    <div class="featured__item__image-container">
+      <img
+        src="{% static 'dist/assets/meals/chicken-burger.png' %}"
+        alt="Featured Item 3"
+        class="featured__item__image"
+      />
+    </div>
+    <div class="featured__item__content">
+      <h3 class="heading-tertiary">Örnek Ürün 3</h3>
+     
+    </div>
+  </div>
+</div>
+
+<div class="categories">
+  <h2 class="heading-secondary">Kategoriler</h2>
+</div>
+
+<div class="categories__list">
+  {% for c in categories %}
+  <a class="categories__item categories__item--1" href="{% url 'category' c.name %}">
+    <div class="categories__item__image-container">
+      <img
+        src="{% static 'dist/assets/meals/' %}{{ c.name|lower }}.png"
+        alt="Categories Item {{ c.name }}"
+        class="categories__item__image"
+      />
+    </div>
+    <div class="categories__item__content">
+      <h3 class="heading-tertiary">{{ c.name }}</h3>
+    </div>
+  </a>
+  {% endfor %}
+</div>
+{% endblock %}

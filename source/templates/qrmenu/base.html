@@ -1,0 +1,69 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="QR Menü für Lucana Cafe" />
+    <meta
+      name="keywords"
+      content="QR Menü, Lucana Cafe, Restaurant, Speisekarte"
+    />
+    <meta name="author" content="Lucana Cafe" />
+
+    <link rel="stylesheet" href="{% static 'dist/css/main.css' %}" />
+
+    <title>Lucana Cafe &ndash; QR Menü</title>
+  </head>
+  <body class="grid">
+    <header class="header">
+      <picture
+        class="header-logo"
+        id="header-logo"
+        aria-label="Logo"
+        role="img"
+      >
+        <img src="{% static 'dist/assets/logo.png' %}" />
+      </picture>
+
+      <nav class="header-nav navigation" id="header-nav" role="navigation">
+        <form action="GET" class="navigation-search-box search-box form" role="search">
+          <input
+            type="text"
+            name="Search Box Input"
+            class="search-box__input input"
+            id="search-box-input"
+            placeholder="Aramaya başlamak için yazın..."
+          />
+          <button
+            name="Search Box Query"
+            class="search-box__submit-btn button button--primary"
+            role="submit"
+          >
+            Ara &ndash; <span>0 Sonuç</span>
+          </button>
+        </form>
+      </nav>
+    </header>
+
+    {% block content %} {% endblock %}
+
+    <div class="contact">
+      <img src="{% static 'dist/assets/map.png' %}" alt="Map" class="contact__map" />
+    
+      <div class="contact__info">
+        <p class="contact__info__text"><strong>Adres:</strong> Lucana Cafe, Türkiye</p>
+        <p class="contact__info__text"><strong>Telefon:</strong> +90 123 456 7890</p>
+        <p class="contact__info__text"><strong>E-posta:</strong> eposta@eposta.com </p>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <p class="footer__text">© 2023 Lucana Cafe. Tüm hakları saklıdır.</p>
+      <p class="footer__text">Gizlilik Politikası | Kullanım Şartları</p>
+      <p class="footer__text">QR Menü &ndash; Lucana Cafe</p>
+      <p class="footer__text">Furkan Esen</p>
+    </footer>
+  </body>
+</html>

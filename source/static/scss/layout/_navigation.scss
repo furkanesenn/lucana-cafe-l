@@ -1,0 +1,9 @@
+@import '../abstracts/mixins';
+
+.navigation {
+  margin-top: 4rem;
+
+  @include respond(small) {
+    margin-top: 2.4rem;
+  }
+}

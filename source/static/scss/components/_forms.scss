@@ -1,0 +1,27 @@
+@import '../abstracts/mixins';
+
+.input {
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: rgba(#333, 0.7);
+  background-color: rgba(#D9D9D9, 0.6);
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 1rem;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+  @include respond(small) {
+    font-size: 0.875rem;
+    
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: row;
+}

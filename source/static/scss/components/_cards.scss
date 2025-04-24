@@ -1,0 +1,31 @@
+.featured__item, .categories__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+
+  &__image {
+    width: 22.5vw;
+    height: auto;
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  } 
+}
+
+.categories__item {
+  position: relative;
+  &__image {
+    width: 37.5vw;  } 
+
+  &__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 6.4rem;
+  }
+  }

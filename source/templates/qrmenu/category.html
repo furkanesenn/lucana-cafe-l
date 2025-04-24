@@ -11,174 +11,19 @@
 </div>
 
 <div class="categories__list">
+  {% for m in meals %}
   <div class="categories__item categories__item--1">
     <div class="categories__item__image-container">
       <img
-        src="{% static 'dist/assets/meals/breakfast.png' %}"
-        alt="Categories Item 1"
+      src="{% static 'dist/assets/meals/' %}{{ m.path|lower }}.png"
         class="categories__item__image"
       />
     </div>
     <div class="categories__item__content">
-      <h3 class="heading-tertiary">Kahvaltı</h3>
+      <h3 class="heading-tertiary">{{m.name}} - {{m.price}} TL</h3>
     </div>
   </div>
-  <div class="categories__item categories__item--1">
-    <div class="categories__item__image-container">
-      <img
-        src="{% static 'dist/assets/meals/breakfast.png' %}"
-        alt="Categories Item 1"
-        class="categories__item__image"
-      />
-    </div>
-    <div class="categories__item__content">
-      <h3 class="heading-tertiary">Kahvaltı</h3>
-    </div>
-  </div>
-  <div class="categories__item categories__item--1">
-    <div class="categories__item__image-container">
-      <img
-        src="{% static 'dist/assets/meals/breakfast.png' %}"
-        alt="Categories Item 1"
-        class="categories__item__image"
-      />
-    </div>
-    <div class="categories__item__content">
-      <h3 class="heading-tertiary">Kahvaltı</h3>
-    </div>
-  </div>
-  <div class="categories__item categories__item--1">
-    <div class="categories__item__image-container">
-      <img
-        src="{% static 'dist/assets/meals/breakfast.png' %}"
-        alt="Categories Item 1"
-        class="categories__item__image"
-      />
-    </div>
-    <div class="categories__item__content">
-      <h3 class="heading-tertiary">Kahvaltı</h3>
-    </div>
-  </div>
-  <div class="categories__item categories__item--1">
-    <div class="categories__item__image-container">
-      <img
-        src="{% static 'dist/assets/meals/breakfast.png' %}"
-        alt="Categories Item 1"
-        class="categories__item__image"
-      />
-    </div>
-    <div class="categories__item__content">
-      <h3 class="heading-tertiary">Kahvaltı</h3>
-    </div>
-  </div>
-  <div class="categories__item categories__item--1">
-    <div class="categories__item__image-container">
-      <img
-        src="{% static 'dist/assets/meals/breakfast.png' %}"
-        alt="Categories Item 1"
-        class="categories__item__image"
-      />
-    </div>
-    <div class="categories__item__content">
-      <h3 class="heading-tertiary">Kahvaltı</h3>
-    </div>
-  </div>
-  <div class="categories__item categories__item--1">
-    <div class="categories__item__image-container">
-      <img
-        src="{% static 'dist/assets/meals/breakfast.png' %}"
-        alt="Categories Item 1"
-        class="categories__item__image"
-      />
-    </div>
-    <div class="categories__item__content">
-      <h3 class="heading-tertiary">Kahvaltı</h3>
-    </div>
-  </div>
-  <div class="categories__item categories__item--1">
-    <div class="categories__item__image-container">
-      <img
-        src="{% static 'dist/assets/meals/breakfast.png' %}"
-        alt="Categories Item 1"
-        class="categories__item__image"
-      />
-    </div>
-    <div class="categories__item__content">
-      <h3 class="heading-tertiary">Kahvaltı</h3>
-    </div>
-  </div>
-  <div class="categories__item categories__item--1">
-    <div class="categories__item__image-container">
-      <img
-        src="{% static 'dist/assets/meals/breakfast.png' %}"
-        alt="Categories Item 1"
-        class="categories__item__image"
-      />
-    </div>
-    <div class="categories__item__content">
-      <h3 class="heading-tertiary">Kahvaltı</h3>
-    </div>
-  </div>
-  <div class="categories__item categories__item--1">
-    <div class="categories__item__image-container">
-      <img
-        src="{% static 'dist/assets/meals/breakfast.png' %}"
-        alt="Categories Item 1"
-        class="categories__item__image"
-      />
-    </div>
-    <div class="categories__item__content">
-      <h3 class="heading-tertiary">Kahvaltı</h3>
-    </div>
-  </div>
-  <div class="categories__item categories__item--1">
-    <div class="categories__item__image-container">
-      <img
-        src="{% static 'dist/assets/meals/breakfast.png' %}"
-        alt="Categories Item 1"
-        class="categories__item__image"
-      />
-    </div>
-    <div class="categories__item__content">
-      <h3 class="heading-tertiary">Kahvaltı</h3>
-    </div>
-  </div>
-  <div class="categories__item categories__item--1">
-    <div class="categories__item__image-container">
-      <img
-        src="{% static 'dist/assets/meals/breakfast.png' %}"
-        alt="Categories Item 1"
-        class="categories__item__image"
-      />
-    </div>
-    <div class="categories__item__content">
-      <h3 class="heading-tertiary">Kahvaltı</h3>
-    </div>
-  </div>
-  <div class="categories__item categories__item--1">
-    <div class="categories__item__image-container">
-      <img
-        src="{% static 'dist/assets/meals/breakfast.png' %}"
-        alt="Categories Item 1"
-        class="categories__item__image"
-      />
-    </div>
-    <div class="categories__item__content">
-      <h3 class="heading-tertiary">Kahvaltı</h3>
-    </div>
-  </div>
-  <div class="categories__item categories__item--1">
-    <div class="categories__item__image-container">
-      <img
-        src="{% static 'dist/assets/meals/breakfast.png' %}"
-        alt="Categories Item 1"
-        class="categories__item__image"
-      />
-    </div>
-    <div class="categories__item__content">
-      <h3 class="heading-tertiary">Kahvaltı</h3>
-    </div>
-  </div>
+  {% endfor %}
 </div>
 {% endif %}
 

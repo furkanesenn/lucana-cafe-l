@@ -24,17 +24,20 @@
         aria-label="Logo"
         role="img"
       >
-        <img src="{% static 'dist/assets/logo.png' %}" />
-      </picture>
+      <a href="/qrmenu">        <img src="{% static 'dist/assets/logo.png' %}" />
+      </a>
+    </picture>
 
       <nav class="header-nav navigation" id="header-nav" role="navigation">
-        <form action="GET" class="navigation-search-box search-box form" role="search">
+        <form action="{% url 'search' %}" method="GET" class="navigation-search-box search-box form" role="search" aria-label="Search Box" id="search-box" name="search-box" > 
+     
           <input
             type="text"
-            name="Search Box Input"
+            name="query"
             class="search-box__input input"
-            id="search-box-input"
+            id="query"
             placeholder="Aramaya başlamak için yazın..."
+            required
           />
           <button
             name="Search Box Query"
@@ -50,7 +53,7 @@
     {% block content %} {% endblock %}
 
     <div class="contact">
-      <img src="{% static 'dist/assets/map.png' %}" alt="Map" class="contact__map" />
+      <!-- <img src="{% static 'dist/assets/map.png' %}" alt="Map" class="contact__map" /> -->
     
       <div class="contact__info">
         <p class="contact__info__text"><strong>Adres:</strong> Lucana Cafe, Türkiye</p>

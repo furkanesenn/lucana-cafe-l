@@ -1,0 +1,27 @@
+{% extends './base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="categories">
+  <h2 class="heading-secondary">{{ query }} için sonuçlar ({{ meals|length }} sonuç bulundu)</h2>
+</div>
+
+<div class="categories__list">
+  {% for m in meals %}
+  <div class="categories__item categories__item--1">
+    <div class="categories__item__image-container">
+      <img
+      src="{% static 'dist/assets/meals/' %}{{ m.path|lower }}.png"
+        class="categories__item__image"
+      />
+    </div>
+    <div class="categories__item__content">
+      <h3 class="heading-tertiary">{{m.name}} - {{m.price}} TL</h3>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+{% endblock %}

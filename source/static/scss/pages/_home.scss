@@ -26,7 +26,7 @@
 
   @include respond(small) {
     gap: 0;
-    margin-top: 0;
+    margin-top: 0px;
   }
 }
 
@@ -38,7 +38,7 @@
 .categories__list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-between; 
   align-items: center;
   gap: 2.4rem;
   width: 100%;
@@ -49,6 +49,24 @@
     row-gap: 1rem;
   }
 }
+
+.categories__item__image-container  {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2  ;
+    background-color: rgba(#fafafa, 0.6);
+  }
+
+  
+}
+
 
 .contact {
   display: flex;

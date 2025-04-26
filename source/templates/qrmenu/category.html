@@ -15,12 +15,19 @@
   <div class="categories__item categories__item--1">
     <div class="categories__item__image-container">
       <img
-      src="{% static 'dist/assets/meals/' %}{{ m.path|lower }}.png"
+        src="{% static 'dist/assets/meals/' %}{{ m.path|lower }}.png"
         class="categories__item__image"
       />
     </div>
     <div class="categories__item__content">
-      <h3 class="heading-tertiary">{{m.name}} - {{m.price}} TL</h3>
+      <h3 class="heading-tertiary">{{ m.name }} - {{ m.price }} TL</h3>
+    </div>
+
+    <div class="categories__item__pop-up">
+      <div class="categories__item__pop-up__content">
+        <h3 class="heading-tertiary">{{ m.name }}</h3>
+        <p class="categories__item__pop-up__content__text">{{ m.description }}</p>
+      </div>
     </div>
   </div>
   {% endfor %}

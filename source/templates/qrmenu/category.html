@@ -35,3 +35,23 @@
 {% endif %}
 
 {% endblock %}
+
+from django.contrib import admin
+from django.urls import path, include
+
+urlpatterns = [
+    path('', include('qrmenu.urls')),
+
+    path('admin/', admin.site.urls),
+    path('qrmenu/', include('qrmenu.urls')),
+]
+
+from django.urls import path
+
+from . import views
+ 
+urlpatterns = [
+    path('', views.IndexView.as_view(), name='index'), 
+    path('search', views.SearchView.as_view(), name='search'),
+    path('c/<str:category>', views.CategoryView.as_view(), name='category'),
+]

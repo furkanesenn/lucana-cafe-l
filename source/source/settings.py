@@ -13,7 +13,7 @@ SECRET_KEY = 'django-insecure-)l9q71mpun58%9dk==@c$dyi88hl$eyq3g6e7$2+48f2er#-$^
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'lucanacafe.com']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'lucanacafe.com', 'https://lucana-cafe-l.onrender.com']
 
 
 # Application definition
